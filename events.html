@@ -55,6 +55,7 @@
       z-index: 1000; padding: 0 5%; height: 72px;
       display: flex; align-items: center; justify-content: space-between;
       background: var(--navy); box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+      border-bottom: 3px solid var(--red);
     }
     .nav__brand { display: flex; align-items: center; gap: 12px; }
     .nav__logo {
@@ -218,7 +219,7 @@
     }
     .featured-event__tag {
       position: absolute; top: 20px; right: 20px;
-      background: rgba(13,27,62,0.8); color: var(--gold-light);
+      background: var(--red); color: var(--white);
       font-family: var(--font-ui); font-size: 10px; font-weight: 700;
       letter-spacing: 0.12em; text-transform: uppercase;
       padding: 5px 12px; border-radius: 2px; backdrop-filter: blur(4px);
@@ -290,7 +291,7 @@
     }
     .event-row:last-child { border-bottom: none; }
     .event-row:hover { background: var(--gold-pale); }
-    .event-row.featured-row { border-left: 4px solid var(--gold); }
+    .event-row.featured-row { border-left: 4px solid var(--red); }
 
     .event-row__date {
       background: var(--navy); border-radius: var(--radius);
@@ -552,6 +553,29 @@
       .footer__main { grid-template-columns: 1fr; gap: 36px; }
       .filter-bar__inner { gap: 10px; }
     }
+  
+    .nav__logo-img {
+      width: 52px !important;
+      height: 52px !important;
+      min-width: 52px;
+      min-height: 52px;
+      max-width: 52px;
+      max-height: 52px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: white;
+      display: block;
+    }
+    .nav__logo-img--footer {
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px;
+      min-height: 48px;
+      max-width: 48px;
+      max-height: 48px;
+    }
+
   </style>
 </head>
 <body>

@@ -55,6 +55,7 @@
       padding: 0 5%; height: 72px;
       display: flex; align-items: center; justify-content: space-between;
       background: var(--navy); box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+      border-bottom: 3px solid var(--red);
     }
     .nav__brand { display: flex; align-items: center; gap: 12px; }
     .nav__logo {
@@ -330,7 +331,7 @@
       padding: 16px 20px;
       background: var(--cream);
       border-radius: var(--radius);
-      border-left: 3px solid var(--gold);
+      border-left: 3px solid var(--red);
       margin-top: 24px;
     }
     .dept-leader__avatar {
@@ -445,6 +446,29 @@
     @media (max-width: 480px) {
       .overview-grid { grid-template-columns: 1fr; }
     }
+  
+    .nav__logo-img {
+      width: 52px !important;
+      height: 52px !important;
+      min-width: 52px;
+      min-height: 52px;
+      max-width: 52px;
+      max-height: 52px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: white;
+      display: block;
+    }
+    .nav__logo-img--footer {
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px;
+      min-height: 48px;
+      max-width: 48px;
+      max-height: 48px;
+    }
+
   </style>
 </head>
 <body>

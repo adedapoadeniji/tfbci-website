@@ -74,6 +74,7 @@
       justify-content: space-between;
       background: var(--navy);
       box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+      border-bottom: 3px solid var(--red);
     }
     .nav__brand {
       display: flex;
@@ -94,18 +95,6 @@
       letter-spacing: 0.05em;
       color: var(--navy);
       flex-shrink: 0;
-    }
-    .nav__logo-img {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      object-fit: contain;
-      flex-shrink: 0;
-      background: white;
-    }
-    .nav__logo-img--footer {
-      width: 48px;
-      height: 48px;
     }
     .nav__name {
       font-family: var(--font-ui);
@@ -482,7 +471,7 @@
     .milestone:last-child { border-bottom: none; }
     .milestone:hover { background: var(--cream); }
     .milestone__year {
-      background: var(--navy);
+      background: var(--red-dark);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -957,6 +946,29 @@
     @media (max-width: 480px) {
       .distinctives-grid { grid-template-columns: 1fr 1fr; }
     }
+  
+    .nav__logo-img {
+      width: 52px !important;
+      height: 52px !important;
+      min-width: 52px;
+      min-height: 52px;
+      max-width: 52px;
+      max-height: 52px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+      background: white;
+      display: block;
+    }
+    .nav__logo-img--footer {
+      width: 48px !important;
+      height: 48px !important;
+      min-width: 48px;
+      min-height: 48px;
+      max-width: 48px;
+      max-height: 48px;
+    }
+
   </style>
 </head>
 <body>
