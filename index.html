@@ -206,6 +206,7 @@
       background: none;
       border: none;
       padding: 4px;
+      margin-left: auto;
     }
     .nav__hamburger span {
       display: block;
@@ -1085,6 +1086,7 @@
       .nav__links, .nav__give { display: none; }
       .nav__hamburger { display: flex; }
       .nav__name { font-size: 10px; letter-spacing: 0.04em; }
+      .nav__logo-img { width: 40px !important; height: 40px !important; min-width: 40px; min-height: 40px; max-width: 40px; max-height: 40px; }
       .mobile-services { display: block; }
       .welcome__inner { grid-template-columns: 1fr; gap: 48px; }
       .welcome__image-block { max-width: 480px; }
@@ -1096,6 +1098,12 @@
       .hero__cross { display: none; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
       .depts-grid { grid-template-columns: repeat(2, 1fr); }
+      /* Force navy nav on mobile — transparent nav looks broken on small screens */
+      .nav {
+        background: var(--navy) !important;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.3) !important;
+        border-bottom: 3px solid var(--red) !important;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1115,7 +1123,6 @@
       object-fit: contain;
       flex-shrink: 0;
       background: white;
-      display: block;
     }
     .nav__logo-img--footer {
       width: 48px;
