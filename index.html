@@ -61,8 +61,52 @@
     }
 
     /* ============================================================
-       NAVIGATION
+       MOBILE SERVICE TIMES — shown only on mobile
        ============================================================ */
+    .mobile-services {
+      display: none;
+      background: var(--navy);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-services__title {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .mobile-services__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+    .mobile-service-item {
+      background: rgba(255,255,255,0.05);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .mobile-service-item__day {
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+    .mobile-service-item__time {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    /* ============================================================
     .nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -1040,14 +1084,15 @@
       :root { --section: 64px; }
       .nav__links, .nav__give { display: none; }
       .nav__hamburger { display: flex; }
+      .nav__name { font-size: 10px; letter-spacing: 0.04em; }
+      .nav__logo-img { width: 40px !important; height: 40px !important; min-width: 40px; min-height: 40px; max-width: 40px; max-height: 40px; }
+      .mobile-services { display: block; }
       .welcome__inner { grid-template-columns: 1fr; gap: 48px; }
       .welcome__image-block { max-width: 480px; }
       .sermons-grid { grid-template-columns: 1fr; }
       .event-item { grid-template-columns: 70px 1fr; }
       .event-item__cta { display: none; }
-      .hero__services-inner { flex-direction: column; gap: 16px; }
-      .service-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px 0; }
-      .service-item:last-child { border-bottom: none; }
+      .hero__services { display: none; }
       .footer__main { grid-template-columns: 1fr; gap: 36px; }
       .hero__cross { display: none; }
       .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -1144,7 +1189,7 @@
       </div>
     </div>
 
-    <!-- Service times strip -->
+    <!-- Service times strip — hidden on mobile, replaced by compact bar -->
     <div class="hero__services">
       <div class="hero__services-inner">
         <div class="service-item">
@@ -1166,6 +1211,31 @@
           <div class="service-item__label">Youth Fellowship</div>
           <div class="service-item__time">4:00 PM</div>
           <div class="service-item__day">Saturday</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MOBILE SERVICE TIMES (mobile only) ===================== -->
+  <section class="mobile-services">
+    <div class="container">
+      <p class="mobile-services__title">Service Times</p>
+      <div class="mobile-services__grid">
+        <div class="mobile-service-item">
+          <span class="mobile-service-item__day">Sunday</span>
+          <span class="mobile-service-item__time">8:00 AM &amp; 10:30 AM</span>
+        </div>
+        <div class="mobile-service-item">
+          <span class="mobile-service-item__day">Wednesday</span>
+          <span class="mobile-service-item__time">5:30 PM</span>
+        </div>
+        <div class="mobile-service-item">
+          <span class="mobile-service-item__day">Friday</span>
+          <span class="mobile-service-item__time">6:00 PM</span>
+        </div>
+        <div class="mobile-service-item">
+          <span class="mobile-service-item__day">Saturday</span>
+          <span class="mobile-service-item__time">4:00 PM</span>
         </div>
       </div>
     </div>
