@@ -22,6 +22,8 @@
       --text-dark:   #1A1A2E;
       --text-mid:    #4A4A6A;
       --text-light:  #8A8AAA;
+      --red:         #C8151B;
+      --red-dark:    #8B0D11;
 
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body:    'Crimson Pro', Georgia, serif;
@@ -78,11 +80,11 @@
     .nav__give {
       font-family: var(--font-ui); font-size: 12px; font-weight: 600;
       letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--navy); background: var(--gold);
+      color: var(--white); background: var(--red);
       padding: 10px 22px; border-radius: var(--radius);
       transition: background 0.2s, transform 0.2s;
     }
-    .nav__give:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .nav__give:hover { background: var(--red-dark); transform: translateY(-1px); }
     .nav__hamburger {
       display: none; flex-direction: column; gap: 5px;
       cursor: pointer; background: none; border: none; padding: 4px;
@@ -416,7 +418,7 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav class="nav">
     <div class="nav__brand">
-      <div class="nav__logo">TFBCI</div>
+      <img src="assets/images/logo.png" alt="TFBCI Logo" class="nav__logo-img" />
       <div class="nav__name">
         The First Baptist Church
         <span>Ijaye, Abeokuta</span>
@@ -751,7 +753,7 @@
       <div class="footer__main">
         <div>
           <div class="footer__brand">
-            <div class="nav__logo">TFBCI</div>
+            <img src="assets/images/logo.png" alt="TFBCI Logo" class="nav__logo-img" />
             <div class="nav__name">
               The First Baptist Church
               <span>Ijaye, Abeokuta</span>
